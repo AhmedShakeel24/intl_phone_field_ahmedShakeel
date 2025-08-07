@@ -419,11 +419,11 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
           countryCode: '+${_selectedCountry.fullCountryCode}',
           number: value,
         );
-
+    
         if (widget.autovalidateMode != AutovalidateMode.disabled) {
           validatorMessage = await widget.validator?.call(phoneNumber);
         }
-
+    
         widget.onChanged?.call(phoneNumber);
       },
       validator: (value) {
@@ -433,10 +433,11 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
               ? null
               : widget.invalidNumberMessage;
         }
-
+    
         return validatorMessage;
       },
       maxLength: widget.disableLengthCheck ? null : _selectedCountry.maxLength,
+      buildCounter: (context, {currentLength, maxLength, isFocused}) => null, // 👈 Hide counter
       keyboardType: widget.keyboardType,
       inputFormatters: widget.inputFormatters,
       enabled: widget.enabled,
