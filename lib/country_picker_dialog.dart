@@ -81,7 +81,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
   Widget build(BuildContext context) {
     final mediaWidth = MediaQuery.of(context).size.width;
     final width = widget.style?.width ?? mediaWidth;
-    const defaultHorizontalPadding = 40.0;
+    const defaultHorizontalPadding = 20.0;
     const defaultVerticalPadding = 24.0;
     return Dialog(
       shape: RoundedRectangleBorder(
@@ -89,7 +89,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
       ),
       insetPadding: EdgeInsets.symmetric(
           vertical: defaultVerticalPadding,
-          horizontal: 10,
+          horizontal: defaultHorizonalPadding,
       backgroundColor: Color(0xFFF7F7F7),
       child: Container(
         padding: widget.style?.padding ?? const EdgeInsets.all(10),
