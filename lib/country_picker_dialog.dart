@@ -89,7 +89,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
       ),
       insetPadding: EdgeInsets.symmetric(
           vertical: defaultVerticalPadding,
-          horizontal: 20,
+          horizontal: 10,
       backgroundColor: Color(0xFFF7F7F7),
       child: Container(
         padding: widget.style?.padding ?? const EdgeInsets.all(10),
